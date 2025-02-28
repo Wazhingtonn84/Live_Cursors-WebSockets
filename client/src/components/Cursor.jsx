@@ -1,10 +1,11 @@
 // components/Cursor
 
 import * as React from "react";
-import { usePerfectCursor } from "../hooks/usePerfectCursors";
+// import { usePerfectCursor } from "./hooks/useCursors";
+import { usePerfectCursor } from "../hooks/useCursor";
 
 export function Cursor({ point }) {
-	const rCursor = React.useRef < SVGSVGElement > null;
+	const rCursor = React.useRef(null);
 
 	const animateCursor = React.useCallback((point) => {
 		const elm = rCursor.current;
